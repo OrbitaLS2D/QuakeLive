@@ -117,7 +117,7 @@ sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=root/g' /etc/supervisor/super
 echo '[program:ql]' >> /etc/supervisor/conf.d/ql.conf
 
 #Configure Supervisor to execute the Minqlx lib loader script, but also increase process and io priority for the qzeroded.x64 process
-#'nice -n -10' increases the process priority, giving QuakeLive a more favorable scheduling frequency under heavy CPU load from Redis/Terminal usage$
+#'nice -n -10' increases the process priority, giving QuakeLive a more favorable scheduling frequency under heavy CPU load from Redis/Terminal usage etc
 #'ionice -c 1 -n 4' increases the io priority, giving QuakeLive first access to the disk
 echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql.conf
 
@@ -189,7 +189,7 @@ echo 'set roundlimit "10"' >> /home/qlds/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_owner "76561198220302229"' >> /home/qlds/baseq3/server.cfg
-echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/baseq3/server$
+echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_database "redis"' >> /home/qlds/baseq3/server.cfg

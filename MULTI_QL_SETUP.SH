@@ -86,10 +86,8 @@ echo 'overkill|ca' >> /home/qlds/27960/baseq3/mappool_ca.txt
 echo 'quarantine|ca' >> /home/qlds/27960/baseq3/mappool_ca.txt
 echo 'trinity|ca' >> /home/qlds/27960/baseq3/mappool_ca.txt
 
-#Rename the original QuakeLive server.cfg to server.cfg.bak
 mv /home/qlds/27960/baseq3/server.cfg /home/qlds/27960/baseq3/server.cfg.bak
 
-#Append basic server.cfg cvars
 echo 'set sv_hostname "rcb60"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_tags "rcb"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27960/baseq3/server.cfg

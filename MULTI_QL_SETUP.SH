@@ -2,13 +2,9 @@
 set -x
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
-
 echo 'deb http://deb.debian.org/debian stretch main non-free' >> /etc/apt/sources.list
-
 dpkg --add-architecture i386
-
 apt-get update
-
 apt-get -y install steamcmd
 
 rm /etc/apt/sources.list
@@ -34,23 +30,15 @@ mkdir /home/qlds/27960/steamapps/workshop/content/282440/
 
 mkdir /tmp/minqlx/
 cd /tmp/minqlx/
-
 git clone https://github.com/MinoMino/minqlx.git /tmp/minqlx
-
 make
-
 cd /
-
 mv /tmp/minqlx/bin/minqlx.x64.so /home/qlds/27960/minqlx.x64.so
-
 mv /tmp/minqlx/bin/minqlx.zip /home/qlds/27960/minqlx.zip
-
 mv /tmp/minqlx/bin/run_server_x64_minqlx.sh /home/qlds/27960/run_server_x64_minqlx.sh
-
 rm -r /tmp/minqlx/
 
 git clone https://github.com/MinoMino/minqlx-plugins.git /home/qlds/27960/minqlx-plugins
-
 python3 -m pip install -r /home/qlds/27960/minqlx-plugins/requirements.txt
 
 #################################################################################################
@@ -63,20 +51,18 @@ mkdir /var/run/redis
 
 sed -i -e 's/port 6379/port 0/g' /etc/redis/redis.conf
 sed -i -e 's/# unixsocket /unixsocket /g' /etc/redis/redis.conf
-sed -i -e 's/ \/tmp\/redis.sock/ \/var\/run\/redis\/redis.sock/g' /etc/redis/redis.conf
 sed -i -e 's/# unixsocketperm 700/unixsocketperm 777/g' /etc/redis/redis.conf
 
 cp /etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf.bak
 sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=root/g' /etc/supervisor/supervisord.conf
 
 echo '[program:ql60]' >> /etc/supervisor/conf.d/ql60.conf
-echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/27960/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql60.conf
+echo 'command=/home/qlds/27960/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql60.conf
 echo 'directory=/home/qlds/27960/' >> /etc/supervisor/conf.d/ql60.conf
 echo 'user=root' >> /etc/supervisor/conf.d/ql60.conf
 echo 'autostart=true' >> /etc/supervisor/conf.d/ql60.conf
 echo 'autorestart=true' >> /etc/supervisor/conf.d/ql60.conf
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql60.conf
-echo 'process_name=qzeroded.x64_60' >> /etc/supervisor/conf.d/ql60.conf
 
 mv /home/qlds/27960/baseq3/mappool_ca.txt /home/qlds/27960/baseq3/mappool_ca.txt.bak
 
@@ -146,13 +132,12 @@ echo 'reload_mappool' >> /home/qlds/27960/baseq3/server.cfg
 #################################################################################################
 
 echo '[program:ql61]' >> /etc/supervisor/conf.d/ql61.conf
-echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/27961/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql61.conf
+echo 'command=/home/qlds/27961/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql61.conf
 echo 'directory=/home/qlds/27961/' >> /etc/supervisor/conf.d/ql61.conf
 echo 'user=root' >> /etc/supervisor/conf.d/ql61.conf
 echo 'autostart=true' >> /etc/supervisor/conf.d/ql61.conf
 echo 'autorestart=true' >> /etc/supervisor/conf.d/ql61.conf
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql61.conf
-echo 'process_name=qzeroded.x64_61' >> /etc/supervisor/conf.d/ql61.conf
 
 mv /home/qlds/27961/baseq3/mappool_ca.txt /home/qlds/27961/baseq3/mappool_ca.txt.bak
 
@@ -222,13 +207,12 @@ echo 'reload_mappool' >> /home/qlds/27961/baseq3/server.cfg
 #################################################################################################
 
 echo '[program:ql62]' >> /etc/supervisor/conf.d/ql62.conf
-echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/27962/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql62.conf
+echo 'command=/home/qlds/27962/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql62.conf
 echo 'directory=/home/qlds/27962/' >> /etc/supervisor/conf.d/ql62.conf
 echo 'user=root' >> /etc/supervisor/conf.d/ql62.conf
 echo 'autostart=true' >> /etc/supervisor/conf.d/ql62.conf
 echo 'autorestart=true' >> /etc/supervisor/conf.d/ql62.conf
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql62.conf
-echo 'process_name=qzeroded.x64_62' >> /etc/supervisor/conf.d/ql62.conf
 
 mv /home/qlds/27962/baseq3/mappool_ca.txt /home/qlds/27962/baseq3/mappool_ca.txt.bak
 
@@ -294,3 +278,5 @@ echo 'set qlx_logs "5"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_logsSize "5000000"' >> /home/qlds/27962/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/27962/baseq3/server.cfg
 echo 'reload_mappool' >> /home/qlds/27962/baseq3/server.cfg
+
+reboot

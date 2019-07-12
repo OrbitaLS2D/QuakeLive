@@ -21,7 +21,7 @@ apt-get update
 #Install steamcmd
 apt-get -y install steamcmd
 
-#Restore original repository sources and update
+#Restore repository sources and update
 rm /etc/apt/sources.list
 mv /etc/apt/sources.list.bak /etc/apt/sources.list
 apt-get update
@@ -96,19 +96,15 @@ sed -i -e 's/port 6379/port 0/g' /etc/redis/redis.conf
 #Edit the Redis config, replacing '# unixsocket ' with 'unixsocket '
 sed -i -e 's/# unixsocket /unixsocket /g' /etc/redis/redis.conf
 
-#Edit the Redis config, replacing ' /tmp/redis.sock' with ' /var/run/redis/redis.sock'
-#Some Redis config files use /tmp/ instead of /var/run/ for the unixsocket
-sed -i -e 's/ \/tmp\/redis.sock/ \/var\/run\/redis\/redis.sock/g' /etc/redis/redis.conf
-
 #Edit the Redis config, replacing '# unixsocketperm 700' with 'unixsocketperm 777'
 sed -i -e 's/# unixsocketperm 700/unixsocketperm 777/g' /etc/redis/redis.conf
 
 #TODO: Add Redis optimizations
 
-#Make a backup copy of the original Supervisor config
+#Make a backup copy of the Supervisor config
 cp /etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf.bak
 
-#Edit the Supervisord config, replacing '[supervisord]' with '[supervisord]\nuser=root'
+#Edit the Supervisor config, replacing '[supervisord]' with '[supervisord]\nuser=root'
 sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=root/g' /etc/supervisor/supervisord.conf
 
 #Create a QuakeLive launch config that Supervisor will consume and execute
@@ -139,17 +135,17 @@ echo 'startretries=3' >> /etc/supervisor/conf.d/ql.conf
 #Rename the original QuakeLive mappool_ca.txt to mappool_ca.txt.bak
 mv /home/qlds/baseq3/mappool_ca.txt /home/qlds/baseq3/mappool_ca.txt.bak
 
-#Append the five most played maps to mappool_ca.txt
+#Append clanarena maps to mappool_ca.txt
 echo 'asylum|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'campgrounds|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'overkill|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'quarantine|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'trinity|ca' >> /home/qlds/baseq3/mappool_ca.txt
 
-#Rename the original QuakeLive server.cfg to server.cfg.bak
+#Rename the QuakeLive server.cfg to server.cfg.bak
 mv /home/qlds/baseq3/server.cfg /home/qlds/baseq3/server.cfg.bak
 
-#Append basic server.cfg cvars
+#Append server.cfg cvars
 echo 'set sv_hostname "rcb"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_tags "rcb"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/baseq3/server.cfg
@@ -201,3 +197,6 @@ echo 'set qlx_logs "5"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_logsSize "5000000"' >> /home/qlds/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/baseq3/server.cfg
 echo 'reload_mappool' >> /home/qlds/baseq3/server.cfg
+
+#Reboot the server after manual config edits
+#reboot

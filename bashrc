@@ -22,7 +22,7 @@ export PATH_QLDS_BASEQ3="/home/qlds/baseq3"
 export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/steamapps/workshop/content/282440"
 
 export QL_STEAM_APPID="282440"
-export PATH_STEAMCMD="/usr/games/steamcmd"
+export STEAMCMD="/usr/games/steamcmd"
 export PATH_STEAM_WORKSHOP_CONTENT_APPID="/root/.steam/SteamApps/workshop/content/282440"
 
 function cdql {

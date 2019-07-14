@@ -29,7 +29,7 @@ apt-get update
 #Install python, build-essential, git, redis and supervisor
 apt-get -y install python3 python3-dev build-essential git redis-server supervisor
 
-#Stop the redis and supervisor service
+#Stop the Redis and Supervisor service
 service redis-server stop
 service supervisor stop
 
@@ -99,8 +99,6 @@ sed -i -e 's/# unixsocket /unixsocket /g' /etc/redis/redis.conf
 #Edit the Redis config, replacing '# unixsocketperm 700' with 'unixsocketperm 777'
 sed -i -e 's/# unixsocketperm 700/unixsocketperm 777/g' /etc/redis/redis.conf
 
-#TODO: Add Redis optimizations
-
 #Make a backup copy of the Supervisor config
 cp /etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf.bak
 
@@ -108,11 +106,11 @@ cp /etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf.bak
 sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=root/g' /etc/supervisor/supervisord.conf
 
 #Create a QuakeLive launch config that Supervisor will consume and execute
-#'[program:ql]' names the program, and 'ql' will be used with supervisorctl command, for instance
+#'[program:ql]' names the program, and 'ql' will be used with the supervisorctl command, for instance
 #supervisorctl stop ql, supervisorctl start ql, supervisorctl restart ql, etc
 echo '[program:ql]' >> /etc/supervisor/conf.d/ql.conf
 
-#Configure Supervisor to execute the Minqlx lib loader script, but also increase process and io priority for the qzeroded.x64 process
+#Configure Supervisor to execute the Minqlx lib loader script, also increase process and io priority for the qzeroded.x64 process
 #'nice -n -10' increases the process priority, giving QuakeLive a more favorable scheduling frequency under heavy CPU load from Redis/Terminal usage etc
 #'ionice -c 1 -n 4' increases the io priority, giving QuakeLive first access to the disk
 echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/run_server_x64_minqlx.sh' >> /etc/supervisor/conf.d/ql.conf
@@ -132,7 +130,7 @@ echo 'autorestart=true' >> /etc/supervisor/conf.d/ql.conf
 #Configure Supervisor to attempt to execute the above command 3 times before giving up
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql.conf
 
-#Rename the original QuakeLive mappool_ca.txt to mappool_ca.txt.bak
+#Rename the QuakeLive mappool_ca.txt to mappool_ca.txt.bak
 mv /home/qlds/baseq3/mappool_ca.txt /home/qlds/baseq3/mappool_ca.txt.bak
 
 #Append clanarena maps to mappool_ca.txt
@@ -145,7 +143,7 @@ echo 'trinity|ca' >> /home/qlds/baseq3/mappool_ca.txt
 #Rename the QuakeLive server.cfg to server.cfg.bak
 mv /home/qlds/baseq3/server.cfg /home/qlds/baseq3/server.cfg.bak
 
-#Append server.cfg cvars
+#Append QuakeLive server cvars
 echo 'set sv_hostname "rcb"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_tags "rcb"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/baseq3/server.cfg

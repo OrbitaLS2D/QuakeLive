@@ -9,14 +9,10 @@ workshoptxt="/home/qlds/baseq3/workshop.txt"
 workshopsrc="/root/.steam/SteamApps/workshop/content"
 workshopdest="/home/qlds/steamapps/workshop/content"
 
-ids=$( sed -e '/^#/d' -e 's/#.*$//' $workshoptxt )
-count=$( echo "$ids" | wc -l )
-index=0
-while (( index < count )); do
-        (( index++ ))
-        id=$( echo $ids | awk -v i=$index '{print $i}' )
-        if [ ! -d "$workshopdest/$appid/$id" ]; then
-                $( echo "$steamcmd +login anonymous +workshop_download_item $appid $id +quit" )
-                $( mv "$workshopsrc/$appid/$id" "$workshopdest/$appid/$id" )
-        fi
+ids=($(sed -e '/^#/d' -e 's/#.*$//' $workshoptxt))
+for id in ${ids[@]}; do
+    if [ ! -d "$workshopdest/$appid/$id" ]; then
+        $steamcmd +login anonymous +workshop_download_item $appid $id +quit
+        mv "$workshopsrc/$appid/$id" "$workshopdest/$appid/$id"
+    fi
 done

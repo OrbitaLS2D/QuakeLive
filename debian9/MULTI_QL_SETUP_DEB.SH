@@ -115,7 +115,7 @@ echo 'set teamsize "4"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set roundlimit "10"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/27960/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set qlx_owner "76561198220302229"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set qlx_owner "your steam id"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/27960/baseq3/server.cfg
@@ -190,7 +190,7 @@ echo 'set teamsize "4"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set roundlimit "10"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/27961/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set qlx_owner "76561198220302229"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set qlx_owner "your steam id"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/27961/baseq3/server.cfg
@@ -265,7 +265,7 @@ echo 'set teamsize "4"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set roundlimit "10"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/27962/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set qlx_owner "76561198220302229"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set qlx_owner "your steam id"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/27962/baseq3/server.cfg

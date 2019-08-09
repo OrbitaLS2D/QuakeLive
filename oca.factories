@@ -30,9 +30,9 @@
 
         "g_overtime": "0",
 		
-        "g_startingAmmo_pl": "10",
+        "g_startingAmmo_pl": "5",
 
-        "g_splashdamage_pl": "50",		
+        "g_splashdamage_pl": "100",		
 
         "g_startingAmmo_gl": "25"
 
@@ -40,7 +40,7 @@
 
     "author": "OrbitaL",
 
-    "description": "CA with other weaps.",
+    "description": "CA with Prox Mine Laauncher",
 
     "basegt": "ca",
 

@@ -21,9 +21,6 @@ balance teamse based on elo
 ban.py
 options for banning people
 
-clan.py
-Adds commands to let players have persistent clan tags without having to change the name on Steam.
-
 essentials.py
 Adds commands for the regular QLDS commands and some more. Adds functionality to restrict teamsize voting and to pass votes before it fails if the majority votes yes. 
  
@@ -49,3 +46,6 @@ Adds a command to change names without relying on Steam.
 
 protect.py
 admins can protect people from being kicked
+
+clan.py
+Adds commands to let players have persistent clan tags without having to change the name on Steam.

@@ -8,3 +8,7 @@ oca.factories
 
 This is a Quake Live factory that adds the proxmine to clanarena. you will have to create a 'scripts' folder in your servers
 baseq3 folder. #cd /home/qlds/baseq3 then #mkdir scripts
+
+After you create the scripts folder do #cd /home/qlds/baseq3/scripts then #wget https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/oca.factories to download it
+then while in game and connected to your server you will need to "!rcon reload_factories" after which you will be able to callvote a new map followed by oca
+i.e. "/cv map campgrounds oca" and you will have the proxmine as a playable weapon in clan arena.

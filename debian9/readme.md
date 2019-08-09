@@ -41,8 +41,3 @@ qlstop stop ql
 qlrestart restart the server
 qladdworkshopids <id> <id> <id>, i.e. qladdworkshopids 1825794056 . This will append workshop.txt in your baseq3 folder with the supplied workshop ids separated by a space, add as many as you want.
 qlupdateworkshopids this requires the use of QL_SW_UPDATER_DEB.sh this will then download the files located in workshop.txt to the workshop content folder.
-
-oca.factories
-
-This is a Quake Live factory that adds the proxmine to clanarena. you will have to create a 'scripts' folder in your servers
-baseq3 folder. #cd /home/qlds/baseq3 then #mkdir scripts

@@ -49,7 +49,7 @@ function qladdworkshopids {
 export -f qladdworkshopids
 
 function qlupdateworkshopids {
-	$PATH_QLDS/QL_SW_UPDATER.SH
+	$PATH_QLDS/QL_SW_UPDATER_DEB.SH
 }
 export -f qlupdateworkshopids
 

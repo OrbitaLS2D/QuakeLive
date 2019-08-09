@@ -4,7 +4,7 @@ I have included these files and here is a quick description of what they do.
 
 MULTI_QL_SETUP_DEB.sh
 
-This file with seamlessly install 3 Quake Live servers on your VPS. You can edit this script any
+This file will seamlessly install 3 Quake Live servers on your VPS. You can edit this script any
 way you wish. I recommend you scroll to the bottom and edit the three server config file settings.
 Each server will be installed in a separate folder in the directory qlds according to the port. 27960, 27961, 27962.
 

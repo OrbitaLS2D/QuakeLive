@@ -219,7 +219,7 @@ mv /home/qlds/27962/baseq3/mappool_ctf.txt /home/qlds/27962/baseq3/mappool_ctf.t
 echo 'duelingkeeps|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
 echo 'troubledwaters|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
 echo 'stronghold|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
-echo 'space|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
+echo 'spacectf|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
 
 mv /home/qlds/27962/baseq3/server.cfg /home/qlds/27962/baseq3/server.cfg.bak
 

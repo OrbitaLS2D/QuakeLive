@@ -259,10 +259,12 @@ echo 'set zmq_rcon_enable "0"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set zmq_stats_enable "1"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set zmq_stats_port "28962"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set zmq_stats_password ""' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set serverstartup "map campgrounds ca"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set serverstartup "map duelingkeeps ctf"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set teamsize "4"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set capturelimit "10"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set timelimit "30"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_itemTimers "0"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_ammoPack "0"' >> /home/qlds/27962/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_owner "your steam id"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27962/baseq3/server.cfg

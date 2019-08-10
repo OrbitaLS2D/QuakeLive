@@ -75,7 +75,7 @@ echo 'trinity|ca' >> /home/qlds/27960/baseq3/mappool_ca.txt
 mv /home/qlds/27960/baseq3/server.cfg /home/qlds/27960/baseq3/server.cfg.bak
 
 echo 'set sv_hostname "The CA Playground 1 VA"' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set sv_tags "CA"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set sv_tags "CA,minqlx,rcb,DIK,VA,pew"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_maxClients "20"' >> /home/qlds/27960/baseq3/server.cfg
@@ -150,7 +150,7 @@ echo 'trinity|ca' >> /home/qlds/27961/baseq3/mappool_ca.txt
 mv /home/qlds/27961/baseq3/server.cfg /home/qlds/27961/baseq3/server.cfg.bak
 
 echo 'set sv_hostname "The CA Playground 2 VA"' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set sv_tags "CA"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set sv_tags "CA,minqlx,rcb,DIK,VA,pew"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_maxClients "20"' >> /home/qlds/27961/baseq3/server.cfg
@@ -224,7 +224,7 @@ echo 'space|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
 mv /home/qlds/27962/baseq3/server.cfg /home/qlds/27962/baseq3/server.cfg.bak
 
 echo 'set sv_hostname "The CTF Playground VA"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set sv_tags "CTF"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set sv_tags "CTF,minqlx,rcb,DIK,SC,pew"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ctf.txt"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_maxClients "20"' >> /home/qlds/27962/baseq3/server.cfg

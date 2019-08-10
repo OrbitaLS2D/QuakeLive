@@ -31,7 +31,7 @@ export QL_STEAM_APPID="282440"
 export STEAMCMD="/usr/games/steamcmd"
 export PATH_STEAM_WORKSHOP_CONTENT_APPID="/root/.steam/SteamApps/workshop/content/282440"
 
-# Server 1 27960
+##########################################################    Server 1 27960
 
 function cdql1 {
 	cd "$PATH_QLDS1"
@@ -81,7 +81,7 @@ function ql1restart {
 }
 export -f ql1restart
 
-#Server 2 27961
+##########################################################    Server 2 27961
 
 function cdql2 {
 	cd "$PATH_QLDS2"
@@ -126,7 +126,7 @@ function ql2restart {
 }
 export -f ql2restart
 
-#Server 3 27962
+##########################################################    Server 3 27962
 
 function cdql3 {
 	cd "$PATH_QLDS3"

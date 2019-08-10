@@ -167,7 +167,7 @@ echo 'set g_allowVote "1"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_voteDelay "1"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_voteLimit "0"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_allowVoteMidGame "1"' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set g_allowSpecVote "0"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set g_allowSpecVote "1"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_warmupReadyPercentage "0.51"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_warmupDelay "5"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_warmupReadyDelay "0"' >> /home/qlds/27961/baseq3/server.cfg
@@ -241,7 +241,7 @@ echo 'set g_allowVote "1"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_voteDelay "1"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_voteLimit "0"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_allowVoteMidGame "1"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set g_allowSpecVote "0"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_allowSpecVote "1"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_warmupReadyPercentage "0.51"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_warmupDelay "5"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_warmupReadyDelay "0"' >> /home/qlds/27962/baseq3/server.cfg
@@ -261,10 +261,13 @@ echo 'set zmq_stats_port "28962"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set zmq_stats_password ""' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set serverstartup "map duelingkeeps ctf"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set teamsize "4"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set capturelimit "10"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set timelimit "30"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set capturelimit "8"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set timelimit "20"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_itemTimers "0"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_ammoPack "0"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_dropCmds "7"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_mecytime "10"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set g_suddenDeathRespawn "1"' >> /home/qlds/27962/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_owner "your steam id"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27962/baseq3/server.cfg

@@ -74,16 +74,16 @@ echo 'trinity|ca' >> /home/qlds/27960/baseq3/mappool_ca.txt
 
 mv /home/qlds/27960/baseq3/server.cfg /home/qlds/27960/baseq3/server.cfg.bak
 
-echo 'set sv_hostname "rcb60"' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set sv_tags "rcb"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set sv_hostname "The CA Playground 1 VA"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set sv_tags "CA"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set sv_maxClients "24"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set sv_maxClients "20"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_password ""' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_privateClients ""' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_privatePassword ""' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set com_hunkMegs "256"' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set com_zoneMegs "512"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set com_zoneMegs "10"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_floodprotect "0"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_floodprot_maxcount "10"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_floodprot_decay "1000"' >> /home/qlds/27960/baseq3/server.cfg
@@ -92,7 +92,7 @@ echo 'set g_allowVote "1"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_voteDelay "1"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_voteLimit "0"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_allowVoteMidGame "1"' >> /home/qlds/27960/baseq3/server.cfg
-echo 'set g_allowSpecVote "0"' >> /home/qlds/27960/baseq3/server.cfg
+echo 'set g_allowSpecVote "1"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set sv_warmupReadyPercentage "0.51"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_warmupDelay "5"' >> /home/qlds/27960/baseq3/server.cfg
 echo 'set g_warmupReadyDelay "0"' >> /home/qlds/27960/baseq3/server.cfg
@@ -149,16 +149,16 @@ echo 'trinity|ca' >> /home/qlds/27961/baseq3/mappool_ca.txt
 
 mv /home/qlds/27961/baseq3/server.cfg /home/qlds/27961/baseq3/server.cfg.bak
 
-echo 'set sv_hostname "rcb61"' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set sv_tags "rcb"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set sv_hostname "The CA Playground 2 VA"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set sv_tags "CA"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set sv_maxClients "24"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set sv_maxClients "20"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_password ""' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_privateClients ""' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_privatePassword ""' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set com_hunkMegs "256"' >> /home/qlds/27961/baseq3/server.cfg
-echo 'set com_zoneMegs "512"' >> /home/qlds/27961/baseq3/server.cfg
+echo 'set com_zoneMegs "10"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set sv_floodprotect "0"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_floodprot_maxcount "10"' >> /home/qlds/27961/baseq3/server.cfg
 echo 'set g_floodprot_decay "1000"' >> /home/qlds/27961/baseq3/server.cfg
@@ -214,26 +214,25 @@ echo 'autostart=true' >> /etc/supervisor/conf.d/ql62.conf
 echo 'autorestart=true' >> /etc/supervisor/conf.d/ql62.conf
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql62.conf
 
-mv /home/qlds/27962/baseq3/mappool_ca.txt /home/qlds/27962/baseq3/mappool_ca.txt.bak
+mv /home/qlds/27962/baseq3/mappool_ctf.txt /home/qlds/27962/baseq3/mappool_ctf.txt.bak
 
-echo 'asylum|ca' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'campgrounds|ca' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'overkill|ca' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'quarantine|ca' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'trinity|ca' >> /home/qlds/27962/baseq3/mappool_ca.txt
+echo 'duelingkeeps|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
+echo 'troubledwaters|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
+echo 'stronghold|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
+echo 'space|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
 
 mv /home/qlds/27962/baseq3/server.cfg /home/qlds/27962/baseq3/server.cfg.bak
 
-echo 'set sv_hostname "rcb62"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set sv_tags "rcb"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set sv_hostname "The CTF Playground VA"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set sv_tags "CTF"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set sv_mapPoolFile "mappool_ctf.txt"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set sv_maxClients "24"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set sv_maxClients "20"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_password ""' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_privateClients ""' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_privatePassword ""' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set com_hunkMegs "256"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set com_zoneMegs "512"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set com_zoneMegs "10"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set sv_floodprotect "0"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_floodprot_maxcount "10"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set g_floodprot_decay "1000"' >> /home/qlds/27962/baseq3/server.cfg
@@ -262,8 +261,8 @@ echo 'set zmq_stats_port "28962"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set zmq_stats_password ""' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set serverstartup "map campgrounds ca"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set teamsize "4"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set roundlimit "10"' >> /home/qlds/27962/baseq3/server.cfg
-echo 'set roundtimelimit "120"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set capturelimit "10"' >> /home/qlds/27962/baseq3/server.cfg
+echo 'set timelimit "30"' >> /home/qlds/27962/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_owner "your steam id"' >> /home/qlds/27962/baseq3/server.cfg
 echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/27962/baseq3/server.cfg

@@ -11,64 +11,162 @@
 # alias ls='ls $LS_OPTIONS'
 # alias ll='ls $LS_OPTIONS -l'
 # alias l='ls $LS_OPTIONS -lA'
-#
+
 # Some more alias to avoid making mistakes:
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
 
-export PATH_QLDS="/home/qlds"
-export PATH_QLDS_BASEQ3="/home/qlds/baseq3"
-export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/steamapps/workshop/content/282440"
+export PATH_QLDS1="/home/qlds/27960"
+export PATH_QLDS2="/home/qlds/27961"
+export PATH_QLDS3="/home/qlds/27962"
+export PATH_QLDS_BASEQ31="/home/qlds/27960/baseq3"
+export PATH_QLDS_BASEQ32="/home/qlds/27961/baseq3"
+export PATH_QLDS_BASEQ33="/home/qlds/27962/baseq3"
+export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID1="/home/qlds/27960/steamapps/workshop/content/282440"
+export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID2="/home/qlds/27961/steamapps/workshop/content/282440"
+export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID3="/home/qlds/27962/steamapps/workshop/content/282440"
 
 export QL_STEAM_APPID="282440"
 export STEAMCMD="/usr/games/steamcmd"
 export PATH_STEAM_WORKSHOP_CONTENT_APPID="/root/.steam/SteamApps/workshop/content/282440"
 
-function cdql {
-	cd "$PATH_QLDS"
-}
-export -f cdql
+# Server 1 27960
 
-function cdqlb {
-	cd "$PATH_QLDS_BASEQ3"
+function cdql1 {
+	cd "$PATH_QLDS1"
 }
-export -f cdqlb
+export -f cdql1
 
-function cdqlc {
-	cd "$PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID"
+function cdql1b {
+	cd "$PATH_QLDS_BASEQ31"
 }
-export -f cdqlc
+export -f cdql1b
 
-function qladdworkshopids {
+function cdql1c {
+	cd "$PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID1"
+}
+export -f cdql1c
+
+function ql1addworkshopids {
 	for var in "$@"
 	do
-		echo "$var" >> "$PATH_QLDS_BASEQ3/workshop.txt"
+		echo "$var" >> "$PATH_QLDS_BASEQ31/workshop.txt"
 	done
 }
-export -f qladdworkshopids
+export -f ql1addworkshopids
 
-function qlupdateworkshopids {
+function ql1updateworkshopids {
 	$PATH_QLDS/QL_SW_UPDATER_DEB.SH
 }
-export -f qlupdateworkshopids
+export -f ql1updateworkshopids
 
 function qlstat {
-	supervisorctl status ql
+	supervisorctl status
 }
 export -f qlstat
 
-function qlstop {
-        supervisorctl stop ql
+function ql1stop {
+        supervisorctl stop ql60
 }
-export -f qlstop
+export -f ql1stop
 
-function qlstart {
-        supervisorctl start ql
+function ql1start {
+        supervisorctl start ql60
 }
-export -f qlstart
+export -f ql1start
 
-function qlrestart {
-        supervisorctl restart ql
+function ql1restart {
+        supervisorctl restart ql60
 }
-export -f qlrestart
+export -f ql1restart
+
+#Server 2 27961
+
+function cdql2 {
+	cd "$PATH_QLDS2"
+}
+export -f cdql2
+
+function cdql2b {
+	cd "$PATH_QLDS_BASEQ32"
+}
+export -f cdql2b
+
+function cdql2c {
+	cd "$PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID2"
+}
+export -f cdql2c
+
+function ql2addworkshopids {
+	for var in "$@"
+	do
+		echo "$var" >> "$PATH_QLDS_BASEQ32/workshop.txt"
+	done
+}
+export -f ql2addworkshopids
+
+function ql2updateworkshopids {
+	$PATH_QLDS/QL_SW_UPDATER_DEB.SH
+}
+export -f ql2updateworkshopids
+
+function ql2stop {
+        supervisorctl stop ql61
+}
+export -f ql2stop
+
+function ql2start {
+        supervisorctl start ql61
+}
+export -f ql2start
+
+function ql2restart {
+        supervisorctl restart ql61
+}
+export -f ql2restart
+
+#Server 3 27962
+
+function cdql3 {
+	cd "$PATH_QLDS3"
+}
+export -f cdql3
+
+function cdql3b {
+	cd "$PATH_QLDS_BASEQ33"
+}
+export -f cdql3b
+
+function cdql3c {
+	cd "$PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID3"
+}
+export -f cdql3c
+
+function ql3addworkshopids {
+	for var in "$@"
+	do
+		echo "$var" >> "$PATH_QLDS_BASEQ33/workshop.txt"
+	done
+}
+export -f ql3addworkshopids
+
+function ql3updateworkshopids {
+	$PATH_QLDS/QL_SW_UPDATER_DEB.SH
+}
+export -f ql3updateworkshopids
+
+function ql3stop {
+        supervisorctl stop ql62
+}
+export -f ql3stop
+
+function ql3start {
+        supervisorctl start ql62
+}
+export -f ql3start
+
+function ql3restart {
+        supervisorctl restart ql62
+}
+export -f ql3restart

@@ -216,10 +216,10 @@ echo 'startretries=3' >> /etc/supervisor/conf.d/ql62.conf
 
 mv /home/qlds/27962/baseq3/mappool_ctf.txt /home/qlds/27962/baseq3/mappool_ctf.txt.bak
 
-echo 'duelingkeeps|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'troubledwaters|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'stronghold|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
-echo 'space|ctf' >> /home/qlds/27962/baseq3/mappool_ca.txt
+echo 'duelingkeeps|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
+echo 'troubledwaters|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
+echo 'stronghold|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
+echo 'space|ctf' >> /home/qlds/27962/baseq3/mappool_ctf.txt
 
 mv /home/qlds/27962/baseq3/server.cfg /home/qlds/27962/baseq3/server.cfg.bak
 

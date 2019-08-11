@@ -8,6 +8,7 @@
       "g_battleSuitDampen": ".33",
       "g_complaintLimit": "0",
       "g_dropCmds": "7",
+      "g_ammoPack": "0",
       "g_dropPowerups": "1",
       "g_friendlyFire": "0",
 	  "g_itemHeight":"15",

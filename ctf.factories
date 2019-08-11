@@ -1,4 +1,3 @@
-[{
     "basegt": "ctf",
     "id":"ctf",
     "title":"Q3 CTF",
@@ -26,8 +25,6 @@
 	  "pmove_WaterWadeScale":"0.75f",
       "mercylimit": "0",
       "sv_warmupReadyPercentage": ".51",
-      "timelimit": "20",
-      "capturelimit":"8",
       "teamsize": "4"
     }
     }]

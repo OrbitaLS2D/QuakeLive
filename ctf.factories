@@ -1,5 +1,5 @@
     "basegt": "ctf",
-    "id":"ctf",
+    "id":"q3ctf",
     "title":"Q3 CTF",
     "cvars":{
 	"capturelimit": "8",

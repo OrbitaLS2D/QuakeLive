@@ -31,6 +31,27 @@ export QL_STEAM_APPID="282440"
 export STEAMCMD="/usr/games/steamcmd"
 export PATH_STEAM_WORKSHOP_CONTENT_APPID="/root/.steam/SteamApps/workshop/content/282440"
 
+##########################################################    All Servers
+function qlstat {
+	supervisorctl status
+}
+export -f qlstat
+
+function qlstop {
+        supervisorctl stop all
+}
+export -f qlstop
+
+function qlstart {
+        supervisorctl start all
+}
+export -f qlstart
+
+function qlrestart {
+        supervisorctl restart all
+}
+export -f qlrestart
+
 ##########################################################    Server 1 27960
 
 function cdql1 {
@@ -60,11 +81,6 @@ function ql1updateworkshopids {
 	$PATH_QLDS1/QL_SW_UPDATER_DEB.SH
 }
 export -f ql1updateworkshopids
-
-function qlstat {
-	supervisorctl status
-}
-export -f qlstat
 
 function ql1stop {
         supervisorctl stop ql60

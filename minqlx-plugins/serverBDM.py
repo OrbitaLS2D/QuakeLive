@@ -673,7 +673,7 @@ class serverBDM(minqlx.Plugin):
                         quit_perc = float(left) / float(games_here) * 100
                     else:
                         quit_perc = 0
-                    channel.reply("^7The ^3{0} ^6bdm ^7for {1} ^7is ^2{2} ^7(games here: ^6{3} ^7Quit: ^6{4:.1f}％)"
+                    channel.reply("^7The ^3{0} ^6bdm ^7for {1} ^7is ^2{2} ^7(games here: ^6{3} ^7Quit: ^6{4:.1f}％^7)"
                                   .format(game_type.upper(), player, rating, games_here, quit_perc))
                     history_msg = []
                     for x in range(1, 6, 1):

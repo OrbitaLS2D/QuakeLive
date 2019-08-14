@@ -1,8 +1,8 @@
 [{
     "cvars": {
 	"g_dropcmds": "0",
-	"g_ammopack": "1",
-	"g_ammopackHack": "1",
+	"g_ammopack": "0",
+	"g_ammopackHack": "0",
         "g_startingAmmo_sg": "50",
         "g_startingAmmo_mg": "100",
         "g_startingAmmo_lg": "150",
@@ -17,7 +17,7 @@
         "g_allowKill": "0",
         "g_startingAmmo_rg": "25",
         "g_overtime": "0",
-	"g_spawnItemAmmo": "1",
+	"g_spawnItemAmmo": "0",
 	"g_spawnItemArmor": "0",
 	"g_spawnItemHealth": "0",
 	"g_spawnItemHoldable": "0",

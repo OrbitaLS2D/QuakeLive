@@ -1,7 +1,4 @@
 [{
-    "basegt": "ctf",
-    "id":"ctf",
-    "title":"Q3 CTF",
     "cvars":{
       "capturelimit": "8",
       "fraglimit": "0",
@@ -27,6 +24,11 @@
       "pmove_WaterWadeScale":"0.75f",
       "mercylimit": "0",
       "sv_warmupReadyPercentage": ".51",
-      "teamsize": "4"
-      }
+      "teamsize": "6"
+      },
+    "author": "OrbitaL",
+    "description": "Q3 style CTF",
+    "basegt": "ctf",
+    "id": "q3ctf",
+    "title": "Q3 CTF"
 }]

@@ -26,9 +26,9 @@
     "g_spawnItemWeapons": "0",
     "g_startingAmmo_gl": "25"
     },
-    "author": "OrbitaL",
-    "description": "Freeze Tag Arena",
-    "basegt": "ft",
-    "id": "fta",
-    "title": "Freeze Tag Arena"
+  "author": "OrbitaL",
+  "description": "Freeze Tag Arena",
+  "basegt": "ft",
+  "id": "fta",
+  "title": "Freeze Tag Arena"
 }]

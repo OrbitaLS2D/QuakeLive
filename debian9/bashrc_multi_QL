@@ -23,6 +23,9 @@ export PATH_QLDS3="/home/qlds/27962"
 export PATH_QLDS1_BASEQ3="/home/qlds/27960/baseq3"
 export PATH_QLDS2_BASEQ3="/home/qlds/27961/baseq3"
 export PATH_QLDS3_BASEQ3="/home/qlds/27962/baseq3"
+export PATH_QLDS1_MINQLXPLUG="/home/qlds/27960/minqlx-plugins"
+export PATH_QLDS2_MINQLXPLUG="/home/qlds/27961/minqlx-plugins"
+export PATH_QLDS3_MINQLXPLUG="/home/qlds/27962/minqlx-plugins"
 export PATH_QLDS1_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/27960/steamapps/workshop/content/282440"
 export PATH_QLDS2_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/27961/steamapps/workshop/content/282440"
 export PATH_QLDS3_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/27962/steamapps/workshop/content/282440"
@@ -59,6 +62,11 @@ function cdql1 {
 	cd "$PATH_QLDS1"
 }
 export -f cdql1
+
+function cdql1p {
+	cd "$PATH_QLDS1_MINQLXPLUG"
+}
+export -f cdql1p
 
 function cdql1b {
 	cd "$PATH_QLDS1_BASEQ3"
@@ -105,6 +113,11 @@ function cdql2 {
 }
 export -f cdql2
 
+function cdql2p {
+	cd "$PATH_QLDS2_MINQLXPLUG"
+}
+export -f cdql2p
+
 function cdql2b {
 	cd "$PATH_QLDS2_BASEQ3"
 }
@@ -149,6 +162,11 @@ function cdql3 {
 	cd "$PATH_QLDS3"
 }
 export -f cdql3
+
+function cdql3p {
+	cd "$PATH_QLDS3_MINQLXPLUG"
+}
+export -f cdql3p
 
 function cdql3b {
 	cd "$PATH_QLDS3_BASEQ3"

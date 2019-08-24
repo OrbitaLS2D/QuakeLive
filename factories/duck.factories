@@ -1,0 +1,28 @@
+[{
+
+    "cvars": {
+        "g_startingAmmo_sg": "50",
+        "g_startingAmmo_mg": "100",
+        "g_startingAmmo_lg": "150",
+        "g_startingAmmo_hmg": "150",
+        "dmflags": "28",
+        "g_startingArmor": "100",
+        "g_startingHealthBonus": "0",
+        "g_startingWeapons": "2443",
+        "g_startingAmmo_rl": "50",
+        "g_startingAmmo_pg": "100",
+        "g_startingHealth": "200",
+        "g_startingAmmo_pl": "10",
+        "g_allowKill": "0",
+        "g_startingAmmo_rg": "25",
+        "g_overtime": "0",
+        "weapon_reload_bfg": "900",
+        "g_startingAmmo_bfg": "20",
+        "g_startingAmmo_gl": "0"
+    },
+    "author": "OrbitaL",
+    "description": "DuckVonQuacks CA",
+    "basegt": "ca",
+    "id": "dca",
+    "title": "DUCK Clan Arena"
+}]

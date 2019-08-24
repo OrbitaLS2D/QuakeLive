@@ -17,6 +17,7 @@
         "g_startingAmmo_rg": "25",
         "g_overtime": "0",
         "weapon_reload_bfg": "900",
+        "g_startingAmmo_pl": "10",
         "g_startingAmmo_bfg": "20",
         "g_startingAmmo_gl": "0"
     },

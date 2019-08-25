@@ -62,6 +62,7 @@ _re_salute = re.compile(r"^salute\W?$", flags=re.IGNORECASE)
 _re_squish = re.compile(r"^squish\W?$", flags=re.IGNORECASE)
 _re_oh_god = re.compile(r"^oh god\W?$", flags=re.IGNORECASE)
 _re_snarl = re.compile(r"^snarl\W?$", flags=re.IGNORECASE)
+_re_snarl = re.compile(r"^kamikaze\W?$", flags=re.IGNORECASE)
 
 class orbfun(minqlx.Plugin):
     database = Redis
@@ -162,6 +163,8 @@ class orbfun(minqlx.Plugin):
             self.play_sound("sound/player/ranger/taunt.wav")
         elif _re_snarl.match(msg):
             self.play_sound("sound/player/sorlag/taunt.wav")
+        elif _re_snarl.match(msg):
+            self.play_sound("sound/items/kamikazerespawn.wav")
 
     def play_sound(self, path):
         if not self.last_sound:

@@ -17,6 +17,8 @@
       "g_suddenDeathRespawn": "1",
       "g_teamForceBalance": "0",
       "g_timeoutCount": "3",
+      "disable_weapon_bfg":"1",
+      "disable_ammo_bfg":"1",
       "pmove_BunnyHop":"0",
       "pmove_CrouchStepJump":"0",
       "pmove_JumpTimeDeltaMin":"50",

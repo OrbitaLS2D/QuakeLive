@@ -69,7 +69,6 @@ class fun(minqlx.Plugin):
     def __init__(self):
         super().__init__()
         self.add_hook("chat", self.handle_chat)
-        self.add_command("cookies", self.cmd_cookies)
         self.last_sound = None
 
         self.set_cvar_once("qlx_funSoundDelay", "3")
@@ -174,14 +173,3 @@ class fun(minqlx.Plugin):
         for p in self.players():
             if self.db.get_flag(p, "essentials:sounds_enabled", default=True):
                 super().play_sound(path, p)
-
-    def cmd_cookies(self, player, msg, channel):
-        x = random.randint(0, 100)
-        if not x:
-            channel.reply("^6♥ ^7Here you go, {}. I baked these just for you! ^6♥".format(player))
-        elif x == 1:
-            channel.reply("What, you thought ^6you^7 would get cookies from me, {}? Hah, think again.".format(player))
-        elif x < 50:
-            channel.reply("For me? Thank you, {}!".format(player))
-        else:
-            channel.reply("I'm out of cookies right now, {}. Sorry!".format(player))

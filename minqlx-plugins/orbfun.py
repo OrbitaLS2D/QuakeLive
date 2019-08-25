@@ -63,7 +63,7 @@ _re_squish = re.compile(r"^squish\W?$", flags=re.IGNORECASE)
 _re_oh_god = re.compile(r"^oh god\W?$", flags=re.IGNORECASE)
 _re_snarl = re.compile(r"^snarl\W?$", flags=re.IGNORECASE)
 
-class orb(minqlx.Plugin):
+class orbfun(minqlx.Plugin):
     database = Redis
 
     def __init__(self):

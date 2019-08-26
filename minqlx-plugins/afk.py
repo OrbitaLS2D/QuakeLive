@@ -1,3 +1,5 @@
+### made by rcb for orbital
+
 import minqlx
 
 class afk(minqlx.Plugin):

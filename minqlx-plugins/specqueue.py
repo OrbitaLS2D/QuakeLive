@@ -1854,7 +1854,7 @@ class specqueue(minqlx.Plugin):
             self.remove_from_join(player)
             self.add_to_afk(player)
         except Exception as e:
-            minqlx.console_print("^1specqueue exec_go_afk to spectator Exceptions: {}".format([e]))
+            minqlx.console_print("^1specqueue exec_go_afk Exceptions: {}".format([e]))
 
     def cmd_here(self, player=None, msg=None, channel=None):
         self.exec_here(player)
@@ -1870,10 +1870,10 @@ class specqueue(minqlx.Plugin):
                         self.look_at_teams(1.0)
                 self.add_to_spec(player)
                 self.remove_from_join(player)
-                self.remove_from_afk(player)
+            self.remove_from_afk(player)
             self.remove_from_queue(player)
         except Exception as e:
-            minqlx.console_print("^1specqueue exec_go_afk to spectator Exceptions: {}".format([e]))
+            minqlx.console_print("^1specqueue exec_here Exceptions: {}".format([e]))
 
     def add_to_afk(self, player):
         try:
@@ -1886,7 +1886,7 @@ class specqueue(minqlx.Plugin):
     def remove_from_afk(self, player):
         try:
             sid = player.steam_id
-            if sid in self._afk:
+            if str(sid) in self._afk:
                 self._afk.remove_from_times(sid)
                 player.center_print("^3Not marked AFK\n^7Join to play or enter the queue.")
                 player.clan = player.clan

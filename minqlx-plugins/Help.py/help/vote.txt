@@ -1,0 +1,15 @@
+
+
+^4///////////////////
+^710 capturelimit / 20 timelimit
+^7CTF/Capture The Flag / Default Mode
+^4///////////////////
+^7/callvote ^1- ^3Include any of the commands listed below.
+^4///////////////////
+^7Next-Map ^1- ^3/callvote nextmap
+^4///////////////////
+^7Specify Map Change ^1- ^3/callvote map mapname
+^4////////////////////
+^7Map Restart ^1- ^3/callvote map_restart
+^4///////////////////
+^3(Scroll Up To See The Entire list!)

@@ -1,0 +1,23 @@
+
+
+
+
+
+^4///////////////////
+^7Player List ^1- ^3/pb_power 
+^4///////////////////
+^7Player Kick ^1- ^3/pb_kick #
+^4///////////////////
+^7Each player must use the ^3/pb_kick ^7command to apply power points.
+^4///////////////////
+^312 ^7power points are required to kick a player.
+^4///////////////////
+^34 ^7power points are assigned to each player by default
+^4///////////////////
+^7The kicked player will not be able to re-join the server for ^360 ^7minutes.
+^4///////////////////
+^7If you have a problem to report (cheats, abuse, etc.):
+^4///////////////////
+^7Contact us at ^7www^0.^6escapedturkey^0.^7com
+^4///////////////////
+^3(Scroll Up To See The Entire list!)

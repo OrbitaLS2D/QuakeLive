@@ -1,0 +1,13 @@
+
+
+
+
+
+^4///////////////////
+^7Mouse Settings: 
+^4///////////////////
+^3/in_mouse -1 ^1- ^7Bypasses direct-input, may feel more precise.
+^3/in_restart ^1- ^7Makes sure it uses the new setting.
+^3/sensitivity # ^1- ^7If your mouse was ^315 ^7substract ^35 ^7and make it ^310. 
+^4//////////////////
+^3(Scroll Up To See The Entire list!)

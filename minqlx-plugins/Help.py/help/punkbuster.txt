@@ -1,0 +1,21 @@
+
+
+
+
+
+^4///////////////////
+^7PunkBuster Setttings: 
+^4///////////////////
+^7PB Sleep
+^4///////////////////
+^3/pb_sleep ## ^1- ^7start at 60, then try 20 if aim sluggish or 500 if hitchy.
+^4///////////////////
+^3/pb_writecfg ^1- ^7writes settings to a config file.
+^4///////////////////
+^7PB System 
+^4///////////////////
+^3/disconnect ^1- ^7Disconnects from a server - must be done.
+^3/pb_system 1 ^1- ^71 is faster. If crashing or lagging try 0.
+^3/reconnect ^1- ^7Reconnects to game server. 
+^4///////////////////
+^3(Scroll Up To See The Entire list!)

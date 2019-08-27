@@ -1,0 +1,32 @@
+
+
+
+
+
+
+^4///////////////////
+^3*Welcome To The Help Menu*
+^4///////////////////
+^5Server Restarts ^34 a.m. ^5Daily!
+^4///////////////////
+^7www^0.^6escapedturkey^0.^7com ^3<- bookmark it!
+^4///////////////////
+^3Game Server Hosting ^1- ^7/help hosting
+^4///////////////////
+^3Connection Settings ^1- ^7/help connection
+^4///////////////////
+^3PunkBuster Settings ^1- ^7/help punkbuster
+^4///////////////////
+^3Server Information ^1- ^7/help serverinfo
+^4///////////////////
+^3Mouse Settings ^1- ^7/help mouse
+^4///////////////////
+^3PunkBuster Update ^1- ^7/help pbupdate
+^4///////////////////
+^3MapList ^1- ^7/help maplist
+^4///////////////////
+^3Voting Options ^1- ^7/help vote
+^4///////////////////
+^3Rules ^1- ^7/help rules
+^4///////////////////
+^3(Scroll Up To See The Entire list!)

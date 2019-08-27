@@ -547,7 +547,7 @@ class specqueue(minqlx.Plugin):
                     location = "minqlx:players:{}:clantag".format(sid)
                     if location in self.db:
                         clan = self.db[location]
-                    if sid in self._afk and clan not in SPEC_TAGS:
+                    if str(sid) in self._afk and clan not in SPEC_TAGS:
                         clan = "afk"
                     if clan in SPEC_TAGS:
                         args['xcn'] = args['cn'] = "{}{}{}".format(label[0], clan, label[1])

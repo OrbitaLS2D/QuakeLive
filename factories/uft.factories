@@ -8,8 +8,8 @@
       "dmflags": "28",
       "g_allowKill": "0",
       "fraglimit": "0",
-	  "g_railjump": "500",
-	  "weapon_reload_rg": "1000",
+      "g_railjump": "500",
+      "weapon_reload_rg": "1000",
       "g_overtime": "0"
     },
     "author": "OrbitaL",

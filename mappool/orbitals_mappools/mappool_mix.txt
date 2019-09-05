@@ -1,9 +1,9 @@
 # specify 1 map per line, mapname|factoryid
 # ex: aerowalk|ffa
 # This mappool will do ca ctf and ft
-#You will have to use my q3ctf.factories 
-#or change the factory name at the end for 
-#each ctf map to 'ctf' the default
+#You will have to use my q3ctf.factories and uft.factories or change
+#the factory name at the end for each q3ctf/uft to the default factory
+#created by OrbitaL
 almostlost|ca
 almostlost|uft
 asylum|ca

@@ -1,0 +1,28 @@
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# see factories.txt for valid factory id values
+almostlost|ca
+asylum|ca
+campgrounds|ca
+deathorglory|ca
+deadandgone|ca
+drunkenmummy|ca
+evolution|ca
+hearth|ca
+hellsgate|ca
+hiddenfortress|ca
+monastery|ca
+overkill|ca
+quarantine|ca
+smash|ca
+theedge|ca
+threestory|ca
+thunderstruck|ca
+trinity|ca
+ospca1|ca
+ts_ca1|ca
+ospdm1|ca
+psidm7|ca
+1plus|ca
+bal3dm2|ca
+swift|ca

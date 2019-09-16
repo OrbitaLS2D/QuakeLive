@@ -32,6 +32,7 @@
        "g_startingAmmo_rg":"25",
        "g_startingAmmo_pg":"100",
        "g_startingAmmo_hmg":"150",
+       "disable_weapon_bfg":"1",
        "g_ammoPack":"1",
        "g_ammoRespawn":"10",
        "pmove_BunnyHop": "0",

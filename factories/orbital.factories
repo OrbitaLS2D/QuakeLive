@@ -19,9 +19,11 @@
 },
 {
  "cvars":{
-       "dmflags":"12",
+       "dmflags":"28",
        "g_startingWeapons":"8447",
        "g_overtime":"0",
+       "g_startingHealth":"200",
+       "g_startingArmor":"100",
        "g_startingAmmo_sg":"50",
        "g_startingAmmo_gl":"25",
        "g_startingAmmo_rl":"50",

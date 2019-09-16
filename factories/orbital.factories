@@ -45,7 +45,7 @@
     "description": "Clan Arena Free For All",
     "basegt": "ffa",
     "id": "caffa",
-    "title": "CA FFA"]
+    "title": "CA FFA"
 },
 {
     "cvars":{

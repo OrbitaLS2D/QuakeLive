@@ -67,7 +67,7 @@
        "pmove_JumpTimeDeltaMin":"50",
        "pmove_WaterSwimScale":"0.5f",
        "pmove_WaterWadeScale":"0.75f",
-       "mercylimit": "0",
+       "mercylimit": "0"
 },
 "author": "OrbitaL",
 "description": "Q3 style CTF",

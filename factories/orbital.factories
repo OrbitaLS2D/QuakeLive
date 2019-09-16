@@ -4,7 +4,6 @@
 	"g_freezeThawTime": "1000",
 	"g_instagib": "1",
 	"g_startingWeapons": "65",
-	"timelimit": "15",
 	"dmflags": "28",
 	"g_allowKill": "0",
 	"fraglimit": "0",
@@ -22,8 +21,6 @@
  "cvars":{
        "dmflags":"12",
        "g_startingWeapons":"8447",
-       "timelimit":"15",
-       "fraglimit":"50",
        "g_overtime":"0",
        "g_startingAmmo_sg":"50",
        "g_startingAmmo_gl":"25",
@@ -48,8 +45,6 @@
 },
 {
  "cvars":{
-       "capturelimit": "8",
-       "fraglimit": "0",
        "g_autoAction": "3",
        "g_battleSuitDampen": ".33",
        "g_complaintLimit": "0",
@@ -73,8 +68,6 @@
        "pmove_WaterSwimScale":"0.5f",
        "pmove_WaterWadeScale":"0.75f",
        "mercylimit": "0",
-       "sv_warmupReadyPercentage": ".51",
-       "teamsize": "6"
 },
 "author": "OrbitaL",
 "description": "Q3 style CTF",

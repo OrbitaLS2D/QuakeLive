@@ -23,6 +23,7 @@
        "g_startingWeapons":"8447",
        "g_overtime":"0",
        "g_startingHealth":"200",
+       "g_startingHealthBonus":"0",
        "g_startingArmor":"100",
        "g_startingAmmo_sg":"50",
        "g_startingAmmo_gl":"25",

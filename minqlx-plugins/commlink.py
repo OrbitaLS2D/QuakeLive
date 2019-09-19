@@ -20,6 +20,8 @@
 # This plugin is released to everyone, for any purpose. It comes with no warranty, no guarantee it works, it's released AS IS.
 # You can modify everything, except for lines 1-4 and the !tomtec_versions code. Please make it better :D
 
+#Modified by OrbitaL on 9/19/2019 changed irc server 
+
 """
 
     Set the following cvars:
@@ -57,7 +59,7 @@ class commlink(minqlx.Plugin):
         self.set_cvar_once("qlx_enableConnectDisconnectMessages", "1")
         self.set_cvar_once("qlx_enableCommlinkMessages", "1")
 
-        self.server = "irc.quakelive.tomtecsolutions.com.au"
+        self.server = "irc.quakenet.org"
         self.identity = ("#" + self.get_cvar("qlx_commlinkIdentity"))
         self.clientName = self.get_cvar("qlx_commlinkServerName")
 

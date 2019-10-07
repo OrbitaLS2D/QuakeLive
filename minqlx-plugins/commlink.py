@@ -82,15 +82,16 @@ class commlink(minqlx.Plugin):
 
         self.plugin_version = "1.5.2"
         self.status_request = False
-        self.server_ip = self.set_ip()
+        self.server_ip = ""
         self.server_port = self.get_cvar("net_port")
+        self.set_ip()
 
     @minqlx.delay(2)
     def set_ip(self):
         res = urllib.request.urlopen("http://checkip.amazonaws.com/").read()
         ip = "{}".format(res)
         ip = re.sub("[b']", "", ip)
-        return ip
+        self.server_ip = ip[0:-2]
 
     def game_countdown(self):
         if self.game.type_short == "duel":

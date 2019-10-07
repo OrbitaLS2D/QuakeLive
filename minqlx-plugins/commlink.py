@@ -37,7 +37,7 @@
             Default: 1
         qlx_enableCommlinkMessages                  - Enables CommLink message reception for all players. If this is set to 0, players have to manually enable CommLink with the !commlink command.
             Default: 1
-        
+
 """
 
 import minqlx
@@ -46,9 +46,7 @@ import asyncio
 import random
 import time
 import re
-import socket
-import pycurl
-from io import BytesIO
+import urllib.request
 
 
 class commlink(minqlx.Plugin):
@@ -87,24 +85,13 @@ class commlink(minqlx.Plugin):
         self.server_ip = self.set_ip()
         self.server_port = self.get_cvar("net_port")
 
+    @minqlx.delay(2)
     def set_ip(self):
-        #s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        #try:
-        #    s.connect(('192.0.0.8', 1027))
-        #except socket.error:
-        #    return None
-        #ip = s.getsockname()[0]
-        #s.close()
-        #return ip
-        buffer = BytesIO()
-        c = pycurl.Curl()
-        c.setopt(c.URL, 'checkip.amazonaws.com')
-        c.setopt(c.WRITEDATA, buffer)
-        c.perform()
-        c.close()
-        body = buffer.getvalue()
-        return body.decode('iso-8859-1').strip()
-        
+        res = urllib.request.urlopen("http://checkip.amazonaws.com/").read()
+        ip = "{}".format(res)
+        ip = re.sub("[b']", "", ip)
+        return ip
+
     def game_countdown(self):
         if self.game.type_short == "duel":
             self.msg("^3CommLink^7 message reception has been disabled during your Duel.")

@@ -47,6 +47,8 @@ import random
 import time
 import re
 import socket
+import pycurl
+from io import BytesIO
 
 
 class commlink(minqlx.Plugin):
@@ -86,12 +88,22 @@ class commlink(minqlx.Plugin):
         self.server_port = self.get_cvar("net_port")
 
     def set_ip(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        try:
-            s.connect(('10.0.0.1', 1027))
-        except socket.error:
-            return None
-        return s.getsockname()[0]
+        #s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        #try:
+        #    s.connect(('192.0.0.8', 1027))
+        #except socket.error:
+        #    return None
+        #ip = s.getsockname()[0]
+        #s.close()
+        #return ip
+        buffer = BytesIO()
+        c = pycurl.Curl()
+        c.setopt(c.URL, 'checkip.amazonaws.com')
+        c.setopt(c.WRITEDATA, buffer)
+        c.perform()
+        c.close()
+        body = buffer.getvalue()
+        return body.decode('iso-8859-1').strip()
         
     def game_countdown(self):
         if self.game.type_short == "duel":

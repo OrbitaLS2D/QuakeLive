@@ -80,7 +80,7 @@ class commlink(minqlx.Plugin):
         self.logger.info("Connecting to {}...".format(self.server))
         self.msg("Connecting to ^3CommLink^7 server...")
 
-        self.plugin_version = "1.5"
+        self.plugin_version = "1.5.1"
         self.status_request = False
         
     def game_countdown(self):

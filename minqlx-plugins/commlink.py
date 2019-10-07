@@ -86,7 +86,7 @@ class commlink(minqlx.Plugin):
         self.server_port = self.get_cvar("net_port")
         self.set_ip()
 
-    @minqlx.delay(2)
+    @minqlx.delay(0.5)
     def set_ip(self):
         res = urllib.request.urlopen("http://checkip.amazonaws.com/").read()
         ip = "{}".format(res)

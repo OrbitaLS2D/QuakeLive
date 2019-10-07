@@ -80,8 +80,18 @@ class commlink(minqlx.Plugin):
         self.logger.info("Connecting to {}...".format(self.server))
         self.msg("Connecting to ^3CommLink^7 server...")
 
-        self.plugin_version = "1.5.1"
+        self.plugin_version = "1.5.2"
         self.status_request = False
+        self.server_ip = self.set_ip()
+        self.server_port = self.get_cvar("net_port")
+
+    def set_ip(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            s.connect(('192.0.0.8', 1027))
+        except socket.error:
+            return None
+        return s.getsockname()[0]
         
     def game_countdown(self):
         if self.game.type_short == "duel":
@@ -137,8 +147,7 @@ class commlink(minqlx.Plugin):
             red = len(teams["red"])
             blue = len(teams["blue"])
             spec = len(teams["spectator"])
-            status = "Red-{}, Blue-{}, Spec-{} {}:{}"\
-                .format(red, blue, spec, socket.gethostbyname(socket.gethostname()), self.get_cvar("net_port"))
+            status = "Red-{}, Blue-{}, Spec-{} {}:{}".format(red, blue, spec, self.server_ip, self.server_port)
             self.irc.msg(self.identity, status)
         elif self.game.type_short != "duel":
             broadcast_commlink(msg)
@@ -183,8 +192,7 @@ class commlink(minqlx.Plugin):
         spec = len(teams["spectator"])
         status = "Team Status: Red- {}, Blue- {}, Spec- {}".format(red, blue, spec)
         self.irc.msg(self.identity, "Need {} player{} here: {} /connect {}:{}"
-                     .format(needed, "s" if needed > 1 else "", status,
-                             socket.gethostbyname(socket.gethostname()), self.get_cvar("net_port")))
+                     .format(needed, "s" if needed > 1 else "", status, self.server_ip, self.server_port))
          
     def handle_raw(self, irc, msg):
         split_msg = msg.split()

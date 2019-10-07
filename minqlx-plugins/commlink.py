@@ -204,7 +204,7 @@ class commlink(minqlx.Plugin):
         return cls.clean_text(text)
 
     def cmd_showversion(self, player, msg, channel):
-        channel.reply("^4commlink.py^7 - version {},by Thomas Jones on 26/11/2015. \nMore additions by ^7Barely^4MiSSeD".format(self.plugin_version))
+        channel.reply("^4commlink.py^7 - version {},by Thomas Jones on 26/11/2015. More additions by ^7Barely^4MiSSeD on 10/7/2019".format(self.plugin_version))
 
 
 # ====================================================================

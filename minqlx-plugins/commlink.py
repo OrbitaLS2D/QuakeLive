@@ -20,7 +20,11 @@
 # This plugin is released to everyone, for any purpose. It comes with no warranty, no guarantee it works, it's released AS IS.
 # You can modify everything, except for lines 1-4 and the !tomtec_versions code. Please make it better :D
 
-#Modified by OrbitaL on 9/19/2019 changed irc server 
+#Modified by OrbitaL on 9/19/2019 changed irc server
+
+# Modified by BarelyMiSSeD on 10/6/2019: (only team games modifications)
+# added - !status (responds with the player status of the other servers)
+# added - !need <num> (tells other server that num of players is needed on the requesting server)
 
 """
 
@@ -42,6 +46,8 @@ import asyncio
 import random
 import time
 import re
+import socket
+
 
 class commlink(minqlx.Plugin):
     def __init__(self):
@@ -66,6 +72,8 @@ class commlink(minqlx.Plugin):
         self.add_command(("world", "say_world"), self.send_commlink_message, priority=minqlx.PRI_LOWEST, usage="<message>")
         self.add_command("tomtec_versions", self.cmd_showversion)
         self.add_command("commlink", self.cmd_toggle_commlink)
+        self.add_command("status", self.server_status)
+        self.add_command("need", self.need_player, usage="<number>")
         
         self.irc = SimpleAsyncIrc(self.server, self.clientName, self.handle_msg, self.handle_perform, self.handle_raw)
         self.irc.start()
@@ -73,6 +81,7 @@ class commlink(minqlx.Plugin):
         self.msg("Connecting to ^3CommLink^7 server...")
 
         self.plugin_version = "1.5"
+        self.status_request = False
         
     def game_countdown(self):
         if self.game.type_short == "duel":
@@ -108,14 +117,30 @@ class commlink(minqlx.Plugin):
         
     def handle_msg(self, irc, user, channel, msg):
         def broadcast_commlink(msg):
+            if msg[0].startswith("Red-") and msg[1].startswith("Blue-") and msg[2].startswith("Spec-"):
+                if not self.status_request:
+                    return
+                self.unset_server_status()
+                msg[0] = "^1{}".format(msg[0])
+                msg[1] = "^4{}".format(msg[1])
+                msg[2] = "^6{}".format(msg[2])
+                msg[3] = "^5/connect {}".format(msg[3])
+            minqlx.console_print("[CommLink] ^4{}^7:^3 {}".format(user[0], " ".join(msg)))
             for p in self.players():
                 if self.db.get_flag(p, "commlink:enabled", default=(self.get_cvar("qlx_enableCommlinkMessages", bool))):
                     p.tell("[CommLink] ^4{}^7:^3 {}".format(user[0], " ".join(msg)))
 
         if not msg:
             return
-        
-        if self.game.type_short != "duel":
+        if msg[0] == 'request_status':
+            teams = self.teams()
+            red = len(teams["red"])
+            blue = len(teams["blue"])
+            spec = len(teams["spectator"])
+            status = "Red-{}, Blue-{}, Spec-{} {}:{}"\
+                .format(red, blue, spec, socket.gethostbyname(socket.gethostname()), self.get_cvar("net_port"))
+            self.irc.msg(self.identity, status)
+        elif self.game.type_short != "duel":
             broadcast_commlink(msg)
         else:
             if self.game.state == "warmup":
@@ -133,6 +158,33 @@ class commlink(minqlx.Plugin):
         text = "^7<{}> ^3{} ".format(player.name, " ".join(msg[1:]))
         self.irc.msg(self.identity, self.translate_colors(text))
         player.tell("^3Message sent via ^3CommLink^7.")
+
+    def server_status(self, player, msg, channel):
+        self.status_request = True
+        self.irc.msg(self.identity, "request_status")
+
+    @minqlx.delay(1.5)
+    def unset_server_status(self):
+        self.status_request = False
+
+    def need_player(self, player, msg, channel):
+        if len(msg) > 1:
+            try:
+                needed = int(msg[1])
+            except:
+                player.tell("^1You must include a number")
+                return minqlx.RET_STOP_ALL
+        else:
+            needed = 1
+        player.tell("^6Sent player request to other servers")
+        teams = self.teams()
+        red = len(teams["red"])
+        blue = len(teams["blue"])
+        spec = len(teams["spectator"])
+        status = "Team Status: Red- {}, Blue- {}, Spec- {}".format(red, blue, spec)
+        self.irc.msg(self.identity, "Need {} player{} here: {} /connect {}:{}"
+                     .format(needed, "s" if needed > 1 else "", status,
+                             socket.gethostbyname(socket.gethostname()), self.get_cvar("net_port")))
          
     def handle_raw(self, irc, msg):
         split_msg = msg.split()

@@ -166,7 +166,7 @@ class commlink(minqlx.Plugin):
         
         text = "^7<{}> ^3{} ".format(player.name, " ".join(msg[1:]))
         self.irc.msg(self.identity, self.translate_colors(text))
-        player.tell("^3Message sent via ^3CommLink^7.")
+        player.tell("Message sent via ^3CommLink^7.")
 
     def server_status(self, player, msg, channel):
         self.status_request = True

@@ -88,4 +88,36 @@
 "basegt": "ctf",
 "id": "q3ctf",
 "title": "Q3 CTF"
+}
+{
+ "cvars":{
+       "dmflags": "28"
+       "g_battleSuitDampen": ".33",
+       "g_complaintLimit": "0",
+       "g_dropCmds": "7",
+       "g_ammoPack": "0",
+       "g_dropPowerups": "1",
+       "g_friendlyFire": "0",
+       "g_itemHeight":"15",
+       "g_itemTimers":"0",
+       "g_mercytime": "10",
+       "g_overtime": "0",
+       "g_spawnArmor": "0",
+       "g_suddenDeathRespawn": "1",
+       "g_teamForceBalance": "0",
+       "g_timeoutCount": "3",
+       "disable_weapon_bfg":"1",
+       "disable_ammo_bfg":"1",
+       "pmove_BunnyHop":"1",
+       "pmove_CrouchStepJump":"1",
+       "pmove_JumpTimeDeltaMin":"100.0f",
+       "pmove_WaterSwimScale":"0.6f",
+       "pmove_WaterWadeScale":"0.8f",
+       "mercylimit": "0"
+},
+"author": "OrbitaL",
+"description": "No self damage CTF",
+"basegt": "ctf",
+"id": "ractf",
+"title": "RA CTF"
 }]

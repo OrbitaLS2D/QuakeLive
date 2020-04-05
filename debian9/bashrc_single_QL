@@ -6,20 +6,21 @@
 # umask 022
 
 # You may uncomment the following lines if you want `ls' to be colorized:
-# export LS_OPTIONS='--color=auto'
-# eval "`dircolors`"
-# alias ls='ls $LS_OPTIONS'
-# alias ll='ls $LS_OPTIONS -l'
-# alias l='ls $LS_OPTIONS -lA'
-#
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+
 # Some more alias to avoid making mistakes:
-# alias rm='rm -i'
-# alias cp='cp -i'
-# alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 export PATH_QLDS="/home/qlds"
 export PATH_QLDS_BASEQ3="/home/qlds/baseq3"
 export PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID="/home/qlds/steamapps/workshop/content/282440"
+export PATH_QLDS_MINQLXPLUG="/home/qlds/minqlx-plugins"
 
 export QL_STEAM_APPID="282440"
 export STEAMCMD="/usr/games/steamcmd"
@@ -39,6 +40,11 @@ function cdqlc {
 	cd "$PATH_QLDS_STEAM_WORKSHOP_CONTENT_APPID"
 }
 export -f cdqlc
+
+function cdqlp {
+	cd "$PATH_QLDS_MINQLXPLUG"
+}
+export -f cdqlp
 
 function qladdworkshopids {
 	for var in "$@"

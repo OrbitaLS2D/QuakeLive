@@ -153,13 +153,13 @@ echo 'set g_password ""' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_privateClients ""' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_privatePassword ""' >> /home/qlds/baseq3/server.cfg
 echo 'set com_hunkMegs "256"' >> /home/qlds/baseq3/server.cfg
-echo 'set com_zoneMegs "512"' >> /home/qlds/baseq3/server.cfg
+echo 'set com_zoneMegs "64"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_floodprotect "0"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_floodprot_maxcount "10"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_floodprot_decay "1000"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_voteFlags "0"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_allowVote "1"' >> /home/qlds/baseq3/server.cfg
-echo 'set g_voteDelay "1"' >> /home/qlds/baseq3/server.cfg
+echo 'set g_voteDelay "5000"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_voteLimit "0"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_allowVoteMidGame "1"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_allowSpecVote "0"' >> /home/qlds/baseq3/server.cfg

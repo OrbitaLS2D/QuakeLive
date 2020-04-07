@@ -13,9 +13,9 @@ import minqlx
 
 class orbFun(minqlx.Plugin):
     def __init__(self):
-    self.add_command(("centerprint","cp"), self.cmd_centerprint, 2)
-    self.add_command(("spec999","999"), self.cmd_spec999, 2)
-    self.add_command(("ragespec","spec") self.cmd_ragespec)
+        self.add_command(("centerprint","cp"), self.cmd_centerprint, 2)
+        self.add_command(("spec999","999"), self.cmd_spec999, 2)
+        self.add_command(("ragespec","spec") self.cmd_ragespec)
     
         def cmd_centerprint(self, player, msg, channel):
         message_string = ""

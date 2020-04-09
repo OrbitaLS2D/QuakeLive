@@ -1,0 +1,14 @@
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/commands.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/kills.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/listmaps.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/mapmonitor.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/players_db.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/protect.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/serverBDM.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/specqueue.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/teamsize.py
+https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/myFun/myFun.py
+https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/aliases.py
+https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/commlink.py
+https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/scores.py
+https://raw.githubusercontent.com/tjone270/Quake-Live/master/minqlx-plugins/branding.py

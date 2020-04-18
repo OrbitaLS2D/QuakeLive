@@ -145,6 +145,16 @@ wget -i wgetplugs.txt
 #Change back to the / dir
 cd
 
+#Rename the defatl QuakeLive workshop.txt to workshop.txt.bak
+mv /home/qlds/baseq3/workshop.txt /home/qlds/baseq3/workshop.txt.bak
+
+#append workshop items to workshop.txt
+echo '585892371' >> /home/qlds/baseq3/workshop.txt
+echo '620087103' >> /home/qlds/baseq3/workshop.txt
+echo '572453229' >> /home/qlds/baseq3/workshop.txt
+echo '1250689005' >> /home/qlds/baseq3/workshop.txt
+echo '1733859113' >> /home/qlds/baseq3/workshop.txt
+
 #Rename the default QuakeLive mappool_ca.txt to mappool_ca.txt.bak
 mv /home/qlds/baseq3/mappool_ca.txt /home/qlds/baseq3/mappool_ca.txt.bak
 
@@ -284,5 +294,6 @@ echo "" >> /home/qlds/baseq3/server.cfg' >> /home/qlds/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/baseq3/server.cfg
 echon 'reload_mappool' >> /home/qlds/baseq3/server.cfg
 
-#Reboot the server after manual config edits
+#Uncomment the line below if you have made changes to the servercfg and are ready to reboot otherwise reboot later.
+
 #reboot

@@ -1,6 +1,6 @@
 UBUNTU 18.04 QL SERVER SETUP
 
-This is the ql server setup shell scripts to setup a QuakeLive server on Ubuntu 18.04 LTS.
+This is the ql server setup shell script to setup a QuakeLive server on Ubuntu 18.04 LTS.
 
 Download this to your VPS and then 'sudo chmod +x QLx64_single_server.sh' to make it executable.
 Next type ./QLx64_single_server.sh to begin installation of the required files and programs to run a dedicated QuakeLive server

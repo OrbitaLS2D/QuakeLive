@@ -1,0 +1,33 @@
+[{
+	"cvars":{
+		"g_startingWeapons":"255",
+		"g_forceDmgThroughSurface":"1",
+		"timelimit":"0",
+		"g_splashdamage_rl":"100",
+		"g_damage_rg":"100",
+		"g_damage_lg": "7",
+		"g_velocity_rl":"900",
+		"g_damage_sg":"6",
+		"g_knockback_lg":"1",
+		"g_knockback_gl":"1",
+		"g_knockback_rl_self":"1",
+		"g_knockback_rl":"1",
+		"g_knockback_rg":"1",
+		"g_knockback_pg_self":"1",
+		"g_knockback_pg":"1",
+		"pmove_AirSteps":"0",
+		"pmove_StepJump":"0",
+		"pmove_StepHeight":"20",
+		"pmove_BunnyHop": "0",
+		"pmove_CrouchStepJump": "0",
+		"pmove_JumpTimeDeltaMin": "50",
+		"pmove_WaterSwimScale": "0.5f",
+		"pmove_WaterWadeScale": "0.75f"
+	},
+	"basegt": "ca",
+	"id":"ra3",
+	"title":"Rocket Arena 3",
+	"author":"OrbitaL",
+	"description":"Clan Arena as it was in Rocket Arena 3.",
+	"tags":["RA3"]
+}]

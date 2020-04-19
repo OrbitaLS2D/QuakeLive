@@ -1,7 +1,3 @@
-Hi this is my new QL repository, I figured I would fork rcb and create this for my own personal use. 
-These files have been edited by me and if these may help you then by all means please use these.
-I have included these files and here is a quick description of what they do.
-
 "MULTI_QL_SETUP_DEB.sh"
 
 This file will seamlessly install 3 Quake Live servers on your VPS. You can edit this script any

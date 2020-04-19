@@ -1,0 +1,65 @@
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# This mappool will do ca ctf and ft
+#You will have to use my q3ctf.factories and uft.factories or change
+#the factory name at the end for each q3ctf/uft to the default factory
+#created by OrbitaL
+almostlost|ca
+almostlost|uft
+asylum|ca
+asylum|uft
+campgrounds|ca
+campgroundsblue|uft
+campercrossings|q3ctf
+deathorglory|ca
+deathorglory|uft
+deadandgone|ca
+deadandgone|uft
+dividedcrossings|q3ctf
+drunkenmummy|ca
+drunkenmummy|uft
+duelingkeeps|q3ctf
+evolution|ca
+evolution|uft
+futurecrossings|q3ctf
+hearth|ca
+hearth|uft
+hellsgate|ca
+hellsgate|uft
+hiddenfortress|ca
+hiddenfortress|uft
+monastery|ca
+monastery|uft
+overkill|ca
+overkill|uft
+quarantine|ca
+quarantine|uft
+shiningforces|q3ctf
+smash|ca
+smash|uft
+spacectf|q3ctf
+spidercrossings|q3ctf
+stronghold|q3ctf
+theedge|ca
+theedge|uft
+threestory|ca
+threestory|uft
+thunderstruck|ca
+thunderstruck|uft
+trinity|ca
+trinity|ift
+troubledwaters|q3ctf
+ospca1|ca
+ospca1|uft
+ts_ca1|ca
+ts_ca1|uft
+ospdm1|ca
+ospdm1|uft
+psidm7|ca
+psidm7|uft
+1plus|ca
+1plus|uft
+bal3dm2|ca
+bal3dm2|uft
+swift|ca
+swift|uft

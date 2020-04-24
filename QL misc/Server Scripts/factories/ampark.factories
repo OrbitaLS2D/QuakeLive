@@ -2,16 +2,15 @@
   {
     "cvars": {
       "dmflags": "28",
-      "g_startingWeapons": "8447",
+      "g_startingWeapons": "8445",
       "g_startingAmmo_sg": "50",
-      "g_startingAmmo_mg": "100",
       "g_startingAmmo_lg": "150",
       "g_startingAmmo_hmg": "150",
       "g_startingAmmo_rl": "50",
       "g_startingAmmo_pg": "100",
       "g_startingAmmo_rg": "25",
       "g_startingAmmo_gl": "10",
-      "g_velocity_rl":"900",
+      "g_velocity_rl":"1000",
       "g_startingArmor": "100",
       "g_startingHealthBonus": "0",
       "g_startingHealth": "200",
@@ -19,9 +18,9 @@
       "g_overtime": "0"
     },
     "author": "OrbitaL",
-    "description": "AmPark CA",
+    "description": "Amusement Park CA",
     "basegt": "ca",
     "id": "ap",
-    "title": "Clan Arena"
+    "title": "AmPrk CA"
   }
   ]

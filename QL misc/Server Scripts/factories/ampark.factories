@@ -22,5 +22,24 @@
     "basegt": "ca",
     "id": "ap",
     "title": "AmPrk CA"
-  }
+  },
+	{
+	"cvars": {
+		"dmflags":"60",
+		"g_startingWeapons":"32",
+    "g_allowKill":"0",
+    "g_overtime":"0",
+		"g_startingHealthBonus":"0",
+		"g_velocity_gl":"800",
+		"g_vampiricDamage":"0.75",
+    "g_infiniteAmmo":"1",
+    "g_startingArmor":"0",
+    "g_startingHealth":"300"
+  },
+  "author": "OrbitaL",
+	"description": "AmPrk Vamp LG CA",
+  "basegt": "ca",
+	"id":"vlg",
+	"title":"Vampiric LG",
+	}
   ]

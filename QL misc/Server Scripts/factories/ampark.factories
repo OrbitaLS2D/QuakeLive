@@ -1,4 +1,4 @@
-[
+
 {
     "cvars": {
         "dmflags": "28",
@@ -30,11 +30,11 @@
         "g_allowKill":"0",
         "g_overtime":"0",
         "g_startingHealthBonus":"0",
-        "g_velocity_gl":"800",
         "g_vampiricDamage":"0.75",
         "g_infiniteAmmo":"1",
         "g_startingArmor":"0",
-        "g_startingHealth":"300"
+        "g_startingHealth":"300",
+        "pmove_doubleJump":"1"
   },
     "author": "OrbitaL",
     "description": "AmPrk Vamp LG CA",
@@ -43,3 +43,4 @@
     "title":"Vampiric LG"
 }
 ]
+

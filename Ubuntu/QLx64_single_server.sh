@@ -290,9 +290,10 @@ echo 'set qlx_funSoundDelay "3"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_funPlayerSoundRepeat "5"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_funAdminSoundCall "0"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_funLast2Sound "1"' >> /home/qlds/baseq3/server.cfg
-echo "" >> /home/qlds/baseq3/server.cfg' >> /home/qlds/baseq3/server.cfg
+echo '' >> /home/qlds/baseq3/server.cfg
+echo '' >> /home/qlds/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/baseq3/server.cfg
-echon 'reload_mappool' >> /home/qlds/baseq3/server.cfg
+echo 'reload_mappool' >> /home/qlds/baseq3/server.cfg
 
 #Uncomment the line below if you have made changes to the servercfg and are ready to reboot otherwise reboot later.
 

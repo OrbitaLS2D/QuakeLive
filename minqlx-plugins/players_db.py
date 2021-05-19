@@ -38,7 +38,7 @@ class players_db(minqlx.Plugin):
         self.add_command(("silenced", "silences", "listsilenced"), self.list_silenced, 3)
         self.add_command("leavers", self.list_leavers, 3)
         self.add_command("warned", self.list_warned, 3)
-        self.add_command(("sid","alias"), self.sid_info, 3)
+        self.add_command(("sid", "alias"), self.sid_info, 3)
 
     def get_db_field(self, field):
         try:
@@ -73,49 +73,61 @@ class players_db(minqlx.Plugin):
             return minqlx.RET_STOP_ALL
         db_entries = self.db.keys("minqlx:players:*")
         for entry in db_entries:
-            entry_type, value = self.get_db_field(entry)
-            if entry_type:
-                if entry_type == "set":
-                    value_list = []
-                    for item in value:
-                        value_list.append(item)
-                    h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
-                elif entry_type == "list":
-                    value_list = []
-                    for item in value:
-                        value_list.append(item)
-                    h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
-                elif entry_type == "hash":
-                    value_list = []
-                    for key, item in value.items():
-                        value_list.append(key)
-                        value_list.append(item)
-                    h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
-                else:
-                    h.write("{}//{}//{}\n".format(entry_type, entry, value))
+            try:
+                entry_type, value = self.get_db_field(entry)
+                if entry_type:
+                    if entry_type == "set":
+                        value_list = []
+                        for item in value:
+                            value_list.append(item)
+                        h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
+                    elif entry_type == "list":
+                        value_list = []
+                        for item in value:
+                            value_list.append(item)
+                        h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
+                    elif entry_type == "hash":
+                        value_list = []
+                        for key, item in value.items():
+                            value_list.append(key)
+                            value_list.append(item)
+                        h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
+                    else:
+                        h.write("{}//{}//{}\n".format(entry_type, entry, value))
+            except:
+                continue
 
         ip_entries = self.db.keys("minqlx:ips:*")
         for entry in ip_entries:
-            entry_type, value = self.get_db_field(entry)
-            if entry_type:
-                value_list = []
-                for item in value:
-                    value_list.append(item)
-                h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
+            try:
+                entry_type, value = self.get_db_field(entry)
+                if entry_type:
+                    value_list = []
+                    for item in value:
+                        value_list.append(item)
+                    h.write("{}//{}//{}\n".format(entry_type, entry, "//".join(value_list)))
+            except:
+                continue
 
-        value = self.db.smembers("minqlx:players")
-        value_list = []
-        for item in value:
-            value_list.append(item)
-        h.write("{}//{}//{}\n".format("set", "minqlx:players", "//".join(value_list)))
+        try:
+            value = self.db.smembers("minqlx:players")
+            value_list = []
+            for item in value:
+                value_list.append(item)
+            h.write("{}//{}//{}\n".format("set", "minqlx:players", "//".join(value_list)))
+        except:
+            pass
 
-        value = self.db.smembers("minqlx:ips")
-        value_list = []
-        for item in value:
-            value_list.append(item)
-        h.write("{}//{}//{}\n".format("set", "minqlx:ips", "//".join(value_list)))
-        h.close()
-        player.tell("^1Finished saving player db to {}".format(DB_FILE))
+        try:
+            value = self.db.smembers("minqlx:ips")
+            value_list = []
+            for item in value:
+                value_list.append(item)
+            h.write("{}//{}//{}\n".format("set", "minqlx:ips", "//".join(value_list)))
+            h.close()
+            player.tell("^1Finished saving player db to {}".format(DB_FILE))
+        except:
+            pass
 
     def add_db(self, player, msg, channel):
         self.enter_db(player)

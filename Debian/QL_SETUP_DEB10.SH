@@ -27,11 +27,11 @@ mv /etc/apt/sources.list.bak /etc/apt/sources.list
 apt-get update
 
 #Install python, build-essential, git, redis and supervisor
-apt-get -y install python3 python3-dev build-essential git redis-server supervisor
+apt -y install python3 python3-dev build-essential git redis-server supervisor libsdl2-2.0-0:i386
 
 #Stop the Redis and Supervisor service
-service redis-server stop
-service supervisor stop
+systemctrl stop redis-server
+systemctrl stop supervisor
 
 #Download the python package manager bootstrapper
 wget https://bootstrap.pypa.io/get-pip.py

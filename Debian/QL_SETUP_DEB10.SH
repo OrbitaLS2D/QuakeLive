@@ -103,7 +103,7 @@ sed -i -e 's/# unixsocketperm 700/unixsocketperm 777/g' /etc/redis/redis.conf
 cp /etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf.bak
 
 #Edit the Supervisor config, replacing '[supervisord]' with '[supervisord]\nuser=root'
-sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=orb/g' /etc/supervisor/supervisord.conf
+sed -i -e 's/\[supervisord\]/\[supervisord\]\nuser=root/g' /etc/supervisor/supervisord.conf
 
 #Create a QuakeLive launch config that Supervisor will consume and execute
 #'[program:ql]' names the program, and 'ql' will be used with the supervisorctl command, for instance
@@ -119,7 +119,7 @@ echo 'command=/usr/bin/nice -n -10 /usr/bin/ionice -c 1 -n 4 /home/qlds/run_serv
 echo 'directory=/home/qlds/' >> /etc/supervisor/conf.d/ql.conf
 
 #Configure Supervisor to run the above command as root
-echo 'user=orb' >> /etc/supervisor/conf.d/ql.conf
+echo 'user=root' >> /etc/supervisor/conf.d/ql.conf
 
 #Configure Supervisor to automatically run the above command when it starts up
 echo 'autostart=true' >> /etc/supervisor/conf.d/ql.conf

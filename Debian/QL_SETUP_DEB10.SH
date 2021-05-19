@@ -26,7 +26,7 @@ rm /etc/apt/sources.list
 mv /etc/apt/sources.list.bak /etc/apt/sources.list
 apt-get update
 
-#Install python, build-essential, git, redis and supervisor
+#Install python, build-essential, git, redis, supervisor and SDL
 apt -y install python3 python3-dev build-essential git redis-server supervisor libsdl2-2.0-0:i386
 
 #Stop the Redis and Supervisor service
@@ -130,6 +130,28 @@ echo 'autorestart=true' >> /etc/supervisor/conf.d/ql.conf
 #Configure Supervisor to attempt to execute the above command 3 times before giving up
 echo 'startretries=3' >> /etc/supervisor/conf.d/ql.conf
 
+#change to minqlx-plugins/ dir
+cd /home/qlds/minqlx-plugins
+
+#Use wget to get more plugins that are in the new defalt server.cfg
+wget https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/wgetplugs.txt
+
+#Download these extra plugins for fun
+wget -i wgetplugs.txt
+
+#Change back to the / dir
+cd
+
+#Rename the defatl QuakeLive workshop.txt to workshop.txt.bak
+mv /home/qlds/baseq3/workshop.txt /home/qlds/baseq3/workshop.txt.bak
+
+#append workshop items to workshop.txt
+echo '585892371' >> /home/qlds/baseq3/workshop.txt
+echo '620087103' >> /home/qlds/baseq3/workshop.txt
+echo '572453229' >> /home/qlds/baseq3/workshop.txt
+echo '1250689005' >> /home/qlds/baseq3/workshop.txt
+echo '1733859113' >> /home/qlds/baseq3/workshop.txt
+
 #Rename the QuakeLive mappool_ca.txt to mappool_ca.txt.bak
 mv /home/qlds/baseq3/mappool_ca.txt /home/qlds/baseq3/mappool_ca.txt.bak
 
@@ -183,7 +205,7 @@ echo 'set roundlimit "10"' >> /home/qlds/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_owner "76561198009631429"' >> /home/qlds/baseq3/server.cfg
-echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/baseq3/server.cfg
+echo 'set qlx_plugins "default"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_database "redis"' >> /home/qlds/baseq3/server.cfg
@@ -196,5 +218,4 @@ echo 'set qlx_logsSize "5000000"' >> /home/qlds/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/baseq3/server.cfg
 echo 'reload_mappool' >> /home/qlds/baseq3/server.cfg
 
-#Reboot the server after manual config edits
-#reboot
+

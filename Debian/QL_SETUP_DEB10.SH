@@ -166,8 +166,8 @@ echo 'trinity|ca' >> /home/qlds/baseq3/mappool_ca.txt
 mv /home/qlds/baseq3/server.cfg /home/qlds/baseq3/server.cfg.bak
 
 #Append QuakeLive server cvars
-echo 'set sv_hostname "rcb"' >> /home/qlds/baseq3/server.cfg
-echo 'set sv_tags "rcb"' >> /home/qlds/baseq3/server.cfg
+echo 'set sv_hostname "#WARP CA 4v4 NY"' >> /home/qlds/baseq3/server.cfg
+echo 'set sv_tags "orb, warp, ca, ny"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_mapPoolFile "mappool_ca.txt"' >> /home/qlds/baseq3/server.cfg
 echo 'set g_accessFile "access.txt"' >> /home/qlds/baseq3/server.cfg
 echo 'set sv_maxClients "24"' >> /home/qlds/baseq3/server.cfg

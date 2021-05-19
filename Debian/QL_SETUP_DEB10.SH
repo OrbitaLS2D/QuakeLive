@@ -30,8 +30,8 @@ apt-get update
 apt -y install python3 python3-dev build-essential git redis-server supervisor libsdl2-2.0-0:i386
 
 #Stop the Redis and Supervisor service
-systemctrl stop redis-server
-systemctrl stop supervisor
+systemctl stop redis-server
+systemctl stop supervisor
 
 #Download the python package manager bootstrapper
 wget https://bootstrap.pypa.io/get-pip.py

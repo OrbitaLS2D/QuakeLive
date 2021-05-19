@@ -205,17 +205,15 @@ echo 'set roundlimit "10"' >> /home/qlds/baseq3/server.cfg
 echo 'set roundtimelimit "120"' >> /home/qlds/baseq3/server.cfg
 echo '//Minqlx' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_owner "76561198009631429"' >> /home/qlds/baseq3/server.cfg
-echo 'set qlx_plugins "default"' >> /home/qlds/baseq3/server.cfg
+echo 'set qlx_plugins "plugin_manager, essentials, balance, motd, permission, ban, silence, clan, names, log, workshop"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_pluginsPath "minqlx-plugins"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_commandPrefix "!"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_database "redis"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_redisUnixSocket "1"' >> /home/qlds/baseq3/server.cfg
-echo 'set qlx_redisAddress "/var/run/redis/redis.sock"' >> /home/qlds/baseq3/server.cfg
+echo 'set qlx_redisAddress "/var/run/redis/redis-server.sock"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_redisDatabase "0"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_redisPassword ""' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_logs "5"' >> /home/qlds/baseq3/server.cfg
 echo 'set qlx_logsSize "5000000"' >> /home/qlds/baseq3/server.cfg
 echo '//Keep@EOF' >> /home/qlds/baseq3/server.cfg
 echo 'reload_mappool' >> /home/qlds/baseq3/server.cfg
-
-

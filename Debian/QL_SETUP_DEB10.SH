@@ -142,7 +142,7 @@ wget -i wgetplugs.txt
 #Change back to the / dir
 cd
 
-#Rename the defatl QuakeLive workshop.txt to workshop.txt.bak
+#Rename the default QuakeLive workshop.txt to workshop.txt.bak
 mv /home/qlds/baseq3/workshop.txt /home/qlds/baseq3/workshop.txt.bak
 
 #append workshop items to workshop.txt
@@ -152,7 +152,7 @@ echo '572453229' >> /home/qlds/baseq3/workshop.txt
 echo '1250689005' >> /home/qlds/baseq3/workshop.txt
 echo '1733859113' >> /home/qlds/baseq3/workshop.txt
 
-#Rename the QuakeLive mappool_ca.txt to mappool_ca.txt.bak
+#Rename the default QuakeLive mappool_ca.txt to mappool_ca.txt.bak
 mv /home/qlds/baseq3/mappool_ca.txt /home/qlds/baseq3/mappool_ca.txt.bak
 
 #Append clanarena maps to mappool_ca.txt
@@ -162,7 +162,7 @@ echo 'overkill|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'quarantine|ca' >> /home/qlds/baseq3/mappool_ca.txt
 echo 'trinity|ca' >> /home/qlds/baseq3/mappool_ca.txt
 
-#Rename the QuakeLive server.cfg to server.cfg.bak
+#Rename the default QuakeLive server.cfg to server.cfg.bak
 mv /home/qlds/baseq3/server.cfg /home/qlds/baseq3/server.cfg.bak
 
 #Append QuakeLive server cvars

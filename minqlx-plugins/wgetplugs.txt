@@ -9,4 +9,4 @@ https://raw.githubusercontent.com/BarelyMiSSeD/minqlx-plugins/master/myFun/myFun
 https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/players_db.py
 https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/commlink.py
 https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/scores.py
-https://raw.githubusercontent.com/tjone270/Quake-Live/master/minqlx-plugins/branding.py
+https://raw.githubusercontent.com/OrbitaLS2D/QuakeLive/master/minqlx-plugins/branding.py

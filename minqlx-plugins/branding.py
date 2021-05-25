@@ -15,6 +15,7 @@ Simply put the plugin in the 'minqlx-plugins' folder, !load the plugin, and set 
     qlx_endOfGameMessage                 - When the game finishes, it'll put the text in this cvar in the text box on the left.
     
     qlx_brandingPrependMapName           - This cvar will put the map name before your qlx_serverBrandName.                     Default: 0
+    qlx_brandingAppendMapName            - This cvar will put the map name on the scoreboard after the brand name               Default: 0
     qlx_brandingAppendGameType           - Will add the game type after your qlx_serverBrandName.                               Default: 0
     qlx_rainbowBrandName                 - Make the entire map name (qlx_serverBrandName) appear in rainbow colouring.          Default: 0
     

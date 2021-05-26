@@ -38,7 +38,7 @@ class players_db(minqlx.Plugin):
         self.add_command(("silenced", "silences", "listsilenced"), self.list_silenced, 3)
         self.add_command("leavers", self.list_leavers, 3)
         self.add_command("warned", self.list_warned, 3)
-        self.add_command(("sid", "alias"), self.sid_info, 0)
+        self.add_command(("sid", "alias"), self.sid_info, 3)
 
     def get_db_field(self, field):
         try:

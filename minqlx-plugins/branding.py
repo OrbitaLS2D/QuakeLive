@@ -1,7 +1,9 @@
 # Created by Thomas Jones on 06/11/15 - thomas@tomtecsolutions.com
 # branding.py, a plugin for minqlx to brand your server.
 # This plugin is released to everyone, for any purpose. It comes with no warranty, no guarantee it works, it's released AS IS.
-# You can modify everything, except for lines 1-4 and the !tomtec_versions code. They're there to indicate I whacked this together originally. Please make it better :D
+# You can modify everything, except for lines 1-4 and the !tomtec_versions code. They're there to indicate I whacked this together originally. 
+# Please make it better :D
+# This version was Edited by Barelyissed to give a few more commands like append map name.
 
 """
 Branding.py is a minqlx plugin that permits you to personalise your server with your own information.
@@ -107,9 +109,6 @@ class branding(minqlx.Plugin):
         if self.get_cvar("qlx_endOfGameMessage") != None:
             self.msg(self.get_cvar("qlx_endOfGameMessage"))
 
-            
-    def cmd_showversion(self, player, msg, channel):
-        channel.reply("^4branding.py^7 - version {}, created by Thomas Jones on 06/11/2015.".format(self.plugin_version))
             
     def cmd_showversion(self, player, msg, channel):
         channel.reply("^4branding.py^7 - version {}, created by Thomas Jones on 06/11/2015.".format(self.plugin_version))

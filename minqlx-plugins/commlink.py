@@ -80,7 +80,7 @@ class commlink(minqlx.Plugin):
         self.logger.info("Connecting to {}...".format(self.server))
         self.msg("Connecting to ^3CommLink^7 server...")
 
-        self.plugin_version = "1.5.2"
+        self.plugin_version = "1.5.pew"
         self.status_request = False
         self.server_ip = ""
         self.server_port = self.get_cvar("net_port")

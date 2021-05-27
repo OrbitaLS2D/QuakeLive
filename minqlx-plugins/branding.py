@@ -111,4 +111,4 @@ class branding(minqlx.Plugin):
 
             
     def cmd_showversion(self, player, msg, channel):
-        channel.reply("^4branding.py^7 - version {}, created by Thomas Jones on 06/11/2015.".format(self.plugin_version))
+        channel.reply("^4branding.py^7 - version {}, by Thomas Jones & ^7Barely^4MiSSeD.".format(self.plugin_version))

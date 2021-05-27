@@ -45,7 +45,7 @@ class branding(minqlx.Plugin):
         self.set_cvar_once("qlx_brandingAppendGameType", "0")
         self.set_cvar_once("qlx_rainbowBrandName", "0")
         
-        self.plugin_version = "1.9"
+        self.plugin_version = "1.9.pew"
 
         self.playerConnectedYetList = []
         
